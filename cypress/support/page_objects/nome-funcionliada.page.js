@@ -1,9 +1,9 @@
-class NomeClasse {
+class ProdutosPage {
 
-    nomeMetodo(parametros ){
+    visitarUrl(parametros ){
         //ações do método
     }
 
 }
 
-export default new NomeClasse()
+export default new ProdutosPage()
