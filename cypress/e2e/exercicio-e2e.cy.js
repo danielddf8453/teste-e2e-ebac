@@ -42,10 +42,10 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
       // Verifica se o 2o produto foi adicionado com sucesso
       cy.get('.woocommerce-message').should('contain', dados[1].nomeProduto);
 
-      // Volta pra página de produtos
+      // Volta pra página de produtos.
       cy.visit('produtos')
 
-      // Add 3o produto ao carrinho
+      // Add 3o produto ao carrinho.
       produtosPage.buscarProdutoLista(dados[2].nomeProduto)
       produtosPage.addProdutoCarrinho(
         dados[2].tamanho,
@@ -53,7 +53,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         dados[2].quantidade
       );
 
-      // Verifica se o 2o produto foi adicionado com sucesso
+      // Verifica se o 2o produto foi adicionado com sucesso.
       cy.get('.woocommerce-message').should('contain', dados[2].nomeProduto);
 
       // Volta pra página de produtos
@@ -91,8 +91,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
       cy.get('#place_order').click()
 
       cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.')
-  
-      
+
     })
   })
 });
